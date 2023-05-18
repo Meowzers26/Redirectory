@@ -5,7 +5,7 @@
     "version": "1.0",
     "icons": "images/icon-redirect.png",
     "background": {
-        "scripts": ["background.js"]
+        "service_worker": ["background.js"]
     },
     "permissions": [
         "webRequest",
