@@ -3,13 +3,18 @@
     "name": "Redirectory",
     "description": "Redirect YouTube links",
     "version": "1.0",
-    "icons": "images/icon-redirect.png",
-    "background": {
-        "scripts": ["background.js"]
+    "declarative_net_request": {
+        "rule_resources" :[{
+            "id": "ruleset_1",
+            "enabled": true,
+            "path": "rules.json"
+        }]
     },
     "permissions": [
-        "webRequest",
-        "webRequestBlocking",
+        "declarativeNetRequestWithHostAccess",
+        "declarativeNetRequestFeedback"
+    ],
+    "host_permissions": [
         "https://www.youtube.com/*"
     ]
 }
